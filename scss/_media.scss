@@ -1,0 +1,136 @@
+@media (max-width: 800px) {
+    #header-home {
+        height: 30rem;
+
+        .header-content {
+            padding-top: 10%;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    #main-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: .5rem 0;
+
+        div {
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            padding: 0 .75rem;
+        }
+    }
+
+    #header {
+        &-home {
+            .header-content {
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        &-inner {
+            height: 8rem;
+        }
+    }
+
+    // Grid-stack
+    #home-a .specials,
+    #home-b .stats,
+    #home-c .process,
+    #about-d .testimonials,
+    #work-a .items,
+    #contact-b .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    // home
+    #home {
+        &-a {
+            .specials div {
+                border-bottom: 1px solid $light-color;
+                padding-bottom: 1rem;
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // about 
+    #about {
+        &-a {
+            .about-info {
+                grid-template-areas:
+                    'bioimage'
+                    'bio'
+                    'aw1'
+                    'aw2'
+                    'aw3';
+            }
+        }
+
+        &-c {
+            display: none;
+        }
+    }
+
+    // contact
+    #contact {
+        &-a {
+            .text-fields {
+                grid-template-areas:
+                    'name'
+                    'email'
+                    'subject'
+                    'phone'
+                    'message';
+            }
+        }
+
+        &-b {
+            .contact-info {
+                div {
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid $light-color;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .h-lead {
+        font-size: 2rem;
+    }
+
+    #main-footer {
+        height: 7rem;
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            height: 7rem;
+            padding: 1rem;
+        }
+    }
+}
+
+// landscape
+@media(max-height: 450px) {
+    #header-home {
+        .header-content {
+            padding-top: 3rem;
+        }
+    }
+}
